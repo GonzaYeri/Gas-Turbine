@@ -64,6 +64,7 @@ Además, se utilizó un modelo base (árbol de decisión sin optimización) como
 
 ## Dashboard Interactivo en Streamlit
 Se implementa una app web para:
+
 • Subir datasets crudos (CSV o Excel)
 • Seleccionar año de análisis
 • Validar columnas necesarias
