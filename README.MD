@@ -10,6 +10,7 @@ El conjunto de datos contiene 36,733 instancias con 11 variables medidas por sen
 - Humedad relativa (AH)
 - Temperatura de entrada/salida de la turbina (TIT/TAT)
 - Emisiones de CO y NOX
+
 Se sigue el protocolo de entrenamiento con los primeros tres años y prueba con los últimos dos años, garantizando reproducibilidad.
 
 ## Análisis Exploratorio
@@ -21,9 +22,11 @@ Se sigue el protocolo de entrenamiento con los primeros tres años y prueba con 
 Para cada variable objetivo (TEY, CO y NOX), se realizó un análisis previo utilizando regresión lineal (OLS) y regularización (Elastic Net) con el fin de identificar y eliminar variables con baja significancia o alta multicolinealidad. Esto permitió depurar el conjunto de características y mejorar la eficiencia de los modelos posteriores.
 
 **Modelo Base**
+
 Antes de aplicar técnicas avanzadas, se entrenó un modelo base utilizando DecisionTreeRegressor sin optimización de hiperparámetros. Este modelo sirvió como referencia inicial para evaluar el rendimiento de los algoritmos más complejos.
 
 **Comparación de Modelos**
+
 Luego se implementaron pipelines de modelado con búsqueda de hiperparámetros (RandomizedSearchCV) para comparar los siguientes algoritmos:
 
 •	Decision Tree
